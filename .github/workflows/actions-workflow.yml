@@ -10,6 +10,5 @@ jobs:
     - name: build and tag image
       run: |
         docker build -t 1122140126@global.ac.id/uas-pccks:latest -f Dockerfile .
-    
-   - name: push to dockerhub
-      run: docker login -u ${{secrets.dockerhub_username}} -p ${{secrets.DOCKERHUB_ACCESSTOKEN}} && docker push 1122140126@global.ac.id/uas-pccks:latest
+    - name: push to dockerhub
+      run: docker login -u 1122140126@global.ac.id -p ${{secrets.DOCKERHUB_ACCESSTOKEN}} && docker push 1122140126@global.ac.id/uas-pccks:latest
